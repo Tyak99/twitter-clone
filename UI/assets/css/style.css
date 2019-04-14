@@ -85,19 +85,28 @@ html {
 .action-links a {
     width: 100%;
     padding: .8em;
-    background: #50a3a2;
+    background: #78cc6d;
     border-radius: 30px;
     text-decoration: none;
     margin-bottom: 1em;
     font-size: .9em;
     font-weight: 500;
     color: #fff;
+    transition: all .2s ease-in-out;
+}
+
+.action-links a:nth-child(1):hover {
+    background: #50a3a2;
 }
 
 .action-links a:nth-child(2) {
     background: #fff;
+    color: #78cc6d;
+    border: 1px solid #78cc6d;
+}
+.action-links a:nth-child(2):hover {
+    border-color: #50a3a2;
     color: #50a3a2;
-    border: 1px solid #50a3a2;
 }
 
 .home-actions .logo {
@@ -148,6 +157,166 @@ html {
     text-decoration: underline;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    z-index: 5;
+    box-shadow: 0px 6px 22px -8px rgba(153, 147, 153, 0.84);
+}
+
+.header-container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.header-container ul {
+    display: flex;
+}
+
+.header-container ul li {
+    list-style: none;
+}
+
+.header-container ul li i {
+    color: #50a3a2;
+    font-size: 18px;
+}
+
+.header-container ul li a {
+    font-size: 13px;
+    color: rgb(102, 117, 127);
+    text-decoration: none;
+    padding: 15px;
+    font-weight: bold;
+    transition: .2s ease-in-out;
+}
+
+.header-container ul li a:hover {
+    border-bottom: 3px solid #50a3a2;
+}
+
+.auth-container {
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 70px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 6px 22px -8px rgba(153, 147, 153, 0.84);
+}
+
+.inner-container {
+    width: 70%;
+    margin: 0 auto;
+    /* padding: 20px 0; */
+}
+
+.inner-container h1 {
+    color: rgb(20, 23, 26);
+    padding: 40px 0 20px 0;
+    font-size: 24px;
+    line-height: 0.8;
+    clear: both;
+}
+
+.form-container {
+    margin: 1em 0;
+}
+
+.password-holder {
+    width: 350px;
+    margin-bottom: 10px;
+    background: rgb(238, 233, 233);
+    position: relative;
+    padding: 16px 0 5px 0;
+    border-radius: 6px;
+}
+
+.password-holder input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    line-height: 20px;
+    font-size: 16px;
+    padding: 9px 40px 0 16px;
+    font-family: inherit;
+    background: none;
+    color: #151924;
+}
+
+.password-holder input:valid+label,
+.password-holder input:focus+label {
+    transform: translate(0, -4px) scale(0.72);
+}
+
+.password-holder input:valid+label+.unlock,
+.password-holder input:focus+label+.unlock {
+    opacity: 1;
+}
+
+.password-holder label {
+    position: absolute;
+    z-index: 0;
+    left: 16px;
+    top: 50%;
+    line-height: 24px;
+    font-size: 14px;
+    margin: -12px 0 0 0;
+    cursor: text;
+    transform-origin: top left;
+    transition: all 0.3s ease;
+}
+
+.password-holder .unlock {
+    position: absolute;
+    z-index: 2;
+    stroke: none;
+    fill: #3F4656;
+    display: block;
+    width: 12px;
+    height: 16px;
+    right: 16px;
+    top: 50%;
+    opacity: 0.1;
+    cursor: pointer;
+    transform: translate(0, -50%);
+    transition: opacity 0.4s ease;
+}
+
+.password-holder:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0 0 0 0;
+    z-index: 4;
+    border-color: #fff #EDF0F9;
+    transition: all 0.3s ease 0.35s;
+}
+
+.btn {
+    font-size: 14px;
+    font-weight: 600;
+    padding: .8em 2em;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #50a3a2;
+}
+
+.text-primary {
+    font-size: 14px;
+    color: #50a3a2;
+    text-decoration: none;
+}
+
 @media (max-width: 767.98px) {
     .home-wrap .flex-container {
         width: 80%;
@@ -163,5 +332,22 @@ html {
     .home-desc span {
         margin-left: .5em;
         font-size: 8px;
+    }
+
+    .auth-container {
+        width: 90%;
+    }
+
+    .password-holder  {
+        width: 250px;
+    }
+
+    .form-container .flex {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .form-container .flex-1 {
+        margin-bottom: .6em;
     }
 }
