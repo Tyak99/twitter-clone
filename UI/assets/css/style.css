@@ -575,4 +575,17 @@ fieldset {
     .form-container .flex-1 {
         margin-bottom: .6em;
     }
+
+    .form-wrapper input[type="text"],
+    .form-wrapper input[type="password"] {
+        width: 100%;
+    }
+
+    .overlay-container {
+        max-width: 90%;
+    }
+
+    .form-wrapper .section {
+        width: 90%;
+    }
 }
