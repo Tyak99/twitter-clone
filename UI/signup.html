@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sign up on Twitter Clone</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
+        <script src="./assets/js/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./index.html">
+                                <i class="icon ion-logo-twitter"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="auth-overlay">
+            <div class="overlay-container">
+                <div class="wrapper">
+                    <ul class="steps">
+                        <li class="is-active">Personal Details</li>
+                        <li>Identity</li>
+                        <li>Security</li>
+                    </ul>
+
+                    <form class="form-wrapper">
+                        <fieldset class="section is-active">
+                            <h3>Your Details</h3>
+                            <input type="text" name="name" id="name" placeholder="Name">
+                            <input type="text" name="email" id="email" placeholder="Email">
+                            <div class="button next">Next</div>
+                        </fieldset>
+                        <fieldset class="section">
+                            <h3>Account Type</h3>
+                            <div class="row cf">
+                                <div class="four col">
+                                    <input type="radio" name="r1" id="r1" checked>
+                                    <label for="r1">
+                                        <h4>Designer</h4>
+                                    </label>
+                                </div>
+                                <div class="four col">
+                                    <input type="radio" name="r1" id="r2"><label for="r2">
+                                        <h4>Developer</h4>
+                                    </label>
+                                </div>
+                                <div class="four col">
+                                    <input type="radio" name="r1" id="r3"><label for="r3">
+                                        <h4>Project Manager</h4>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="button prev">Prev</div>
+                            <div class="button next">Next</div>
+                        </fieldset>
+                        <fieldset class="section">
+                            <h3>Choose a Password</h3>
+                            <input type="password" name="password" id="password" placeholder="Password">
+                            <input type="password" name="password2" id="password2" placeholder="Re-enter Password">
+                            <button class="submit button prev" type="button">Prev</button>
+                            <input class="submit button next" type="submit" value="Sign Up">
+                        </fieldset>
+                        <fieldset class="section">
+                            <h3>Account Created!</h3>
+                            <p>Your account has now been created. A Confirmation Mail has been sent.</p>
+                            <a href="./login.html" class="button">Log In</a>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/app.js"></script>
+    </body>
+</html>
