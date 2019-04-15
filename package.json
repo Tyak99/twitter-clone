@@ -1,0 +1,59 @@
+{
+  "name": "twiiter-clone",
+  "version": "1.0.0",
+  "description": "Twitter Clone is an application that enables connection with several people and social networking service on which users post and interact with messages known as \"Tweets\".",
+  "main": "index.js",
+  "scripts": {
+    "dev": "DEBUG=app cross-env NODE_ENV=development nodemon --exec babel-node -- ./server/src/app.js",
+    "start": "cross-env NODE_ENV=production node ./server/dist/src/app.js",
+    "build": "npm run clean && babel ./server -d ./server/dist",
+    "clean": "rm -rf server/dist",
+    "lint": "eslint **/*.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/despeauxz/twiiter-clone.git"
+  },
+  "author": "Malik Godwin Onimisi despeauxz@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/despeauxz/twiiter-clone/issues"
+  },
+  "homepage": "https://github.com/despeauxz/twiiter-clone#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11",
+    "morgan": "^1.9.1",
+    "npm-run-all": "^4.1.5",
+    "debug": "^4.1.1",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.3",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.1.3",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nodemon": "^1.18.11",
+    "nyc": "^13.3.0",
+    "sinon": "^7.3.1"
+  }
+}
