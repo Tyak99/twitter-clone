@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Twitter Clone</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css"> -->
+        <link rel="stylesheet" href="./assets/css/modules/dashboard.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.css">
+        <script src="./assets/js/jquery.min.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="centre" id="logo">
+                <span class="fab fa-twitter"></span>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a class="centre selected" href="#" data-balloon-pos="right" data-balloon="Home">
+                        <span class="fas fa-home"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="centre" href="#" data-balloon-pos="right" data-balloon="Moments">
+                        <span class="fas fa-bolt"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="centre" href="#" data-balloon-pos="right" data-balloon="Notifications">
+                        <span class="fas fa-bell"></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="centre" href="#" data-balloon-pos="right" data-balloon="Direct Messages">
+                        <span class="fas fa-envelope"></span>
+                    </a>
+                </li>
+                <li>
+                    <button class="centre searchBtn" href="#" data-balloon-pos="right" data-balloon="Search">
+                        <span class="fas fa-search"></span>
+                    </button>
+                </li>
+            </ul>
+            <ul class="navBottom">
+                <li>
+                    <button class="newTweet centre" data-balloon-pos="right" data-balloon="New Tweet">
+                        <span class="fas fa-comment-alt"></span>
+                    </button>
+                </li>
+                <li>
+                    <button class="you centre" data-balloon-pos="right" data-balloon="You">
+                        <img src="https://pbs.twimg.com/profile_images/1044222938474397696/TtNO9cun_400x400.jpg" />
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <div class="meOverlay"></div>
+        <div class="searchOverlay"></div>
+        <div class="searchContainer">
+            <div class="inputContainer">
+                <input type="text" placeholder="Search Twitter" value="Youtube" />
+                <button class="submit" type="submit"><span class="fas fa-search"></span></button>
+            </div>
+        </div>
+        <div class="meContainer">
+            <div class="section Me">
+                <div class="avatar"><img
+                        src="https://pbs.twimg.com/profile_images/1044222938474397696/TtNO9cun_400x400.jpg" /></div>
+                <div class="info">
+                    <div class="name">Malik | Godwin</div>
+                    <div class="atMe">@_Despeauxz</div>
+                </div>
+            </div>
+            <div class="section">
+                <ul>
+                    <li><a href=""><span class="fas fa-user"></span><span class="text">Profile</span></a></li>
+                    <li><a href=""><span class="fas fa-list-ul"></span><span class="text">Lists</span></a></li>
+                    <li><a href=""><span class="fas fa-bolt"></span><span class="text">Moments</span></a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <ul>
+                    <li><a href="#">Settings and Privacy</a></li>
+                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="#">Keyboard shortcuts</a></li>
+                    <li><a href="#">Log out</a></li>
+                </ul>
+            </div>
+            <div class="section Night">
+                <ul>
+                    <li>
+                        <button class="NightMode">
+                            <span class="far fa-moon"></span>
+                            <div class="text">Night Mode</div>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="newTweetContainer centre">
+            <div class="newTweetDarken"></div>
+            <div class="newTweetBox">
+                <div class="head">
+                    <h2>Compose new Tweet</h2>
+                    <span class="fas fa-times closeNewTweet"></span>
+                </div>
+                <div class="body">
+                    <textarea placeholder="What's happening?"></textarea>
+                </div>
+                <div class="footer">
+                    <div class="add"><a class="centre" href="#" data-balloon="Add Photos or Video"
+                            data-balloon-pos="up"><span class="far fa-image"></span></a><a class="centre" href="#"
+                            data-balloon="Add a GIF" data-balloon-pos="up"><span class="fas fa-film"></span></a><a
+                            class="centre" href="#" data-balloon="Add Poll" data-balloon-pos="up"><span
+                                class="far fa-chart-bar"></span></a></div>
+                    <div class="submit">
+                        <button><span class="fas fa-comment-alt"></span><span class="text">Tweet</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Header">
+            <div class="headerDarken"></div>
+            <div id="wrapper">
+                <div class="headerMe">
+                    <div class="avatar"><img
+                            src="https://pbs.twimg.com/profile_images/1044222938474397696/TtNO9cun_400x400.jpg" /></div>
+                    <div class="info">
+                        <div class="name">Malik | Godwin</div>
+                        <div class="atMe">@_Despeauxz</div>
+                    </div>
+                </div>
+                <div class="stats">
+                    <a class="statBox" href="">
+                        <h3>Tweets</h3>
+                        <p>3.6K</p>
+                    </a>
+                    <a class="statBox" href="">
+                        <h3>Following</h3>
+                        <p>182</p>
+                    </a>
+                    <a class="statBox" href="">
+                        <h3>Followers</h3>
+                        <p>181</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            <div class="flex" id="wrapper">
+                <div class="timeline">
+                    <div class="addTweet">
+                        <div class="avatar">
+                            <img src="./assets/images/avatar.jpg" />
+                        </div>
+                        <div class="textarea">
+                            <textarea placeholder="What's happening?"></textarea>
+                            <div class="btns">
+                                <div class="add">
+                                    <a class="centre" href="#" data-balloon="Add Photos or Video"
+                                        data-balloon-pos="up">
+                                        <span class="far fa-image"></span>
+                                    </a>
+                                    <a class="centre" href="#" data-balloon="Add a GIF" data-balloon-pos="up">
+                                        <span class="fas fa-film"></span>
+                                    </a>
+                                    <a class="centre" href="#" data-balloon="Add Poll" data-balloon-pos="up">
+                                        <span class="far fa-chart-bar"></span>
+                                    </a>
+                                </div>
+                                <div class="submit">
+                                    <button>
+                                        <span class="fas fa-comment-alt"></span>
+                                        <span class="text">Tweet</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <a class="avatar" href="">
+                            <img src="./assets/images/avatar.jpg" />
+                        </a>
+                        <div class="infoContainer">
+                            <div class="nameContainer">
+                                <a href="#">
+                                    <span class="name">Bob Ross</span>
+                                    <span class="atMe">@BobRoss</span>
+                                    <span class="time">11m</span>
+                                </a>
+                            </div>
+                            <div class="message">
+                                <p>Just posting some of my work.</p>
+                                <img
+                                    src="./assets/images/autumns-glow-c-steele.jpg" />
+                            </div>
+                            <div class="btns">
+                                <button data-balloon="Reply" data-balloon-pos="up"><span class="fas fa-comment"></span><span class="number">45</span></button>
+                                <button data-balloon="Retweet" data-balloon-pos="up"><span class="fas fa-retweet"></span><span class="number">12.3K</span></button>
+                                <button data-balloon="Like" data-balloon-pos="up"><span class="far fa-heart"></span><span class="number">23.9K</span></button>
+                                <button data-balloon="Direct Message" data-balloon-pos="up"><span class="far fa-envelope"></span><span class="number"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <a class="avatar" href="#">
+                            <img src="./assets/images/avatar.jpg" /></a>
+                        <div class="infoContainer">
+                            <div class="nameContainer"><a href="#"><span class="name">Malik | Godwin</span><span
+                                        class="atMe">@_Despeauxz</span><span class="time">23m</span></a></div>
+                            <div class="message">
+                                <p>This is my second attempt on a redesign for twitter clone</p>
+                                <p>Night mode button even works now! :D</p>
+                                <p>You can also press the "Search" and "You" buttons to open a overlay.</p>
+                                <p>I've also just added more responsive rules. So it's looks "usable".</p>
+                            </div>
+                            <div class="btns">
+                                <button data-balloon="Reply" data-balloon-pos="up"><span class="fas fa-comment"></span><span class="number">2</span></button>
+                                <button data-balloon="Retweet" data-balloon-pos="up"><span class="fas fa-retweet"></span><span class="number">1</span></button>
+                                <button data-balloon="Like" data-balloon-pos="up"><span class="far fa-heart"></span><span class="number">5</span></button>
+                                <button data-balloon="Direct Message" data-balloon-pos="up"><span class="far fa-envelope"></span><span class="number"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <a class="avatar" href="">
+                            <img src="./assets/images/avatar.jpg" />
+                        </a>
+                        <div class="infoContainer">
+                            <div class="nameContainer"><a href="#"><span class="name">Albus Dumbledore</span><span
+                                        class="atMe">@albusdumb</span><span class="time">23m</span></a></div>
+                            <div class="message">
+                                <p>Very impressive work by this young fellow.</p>
+                                <iframe src="https://www.youtube.com/embed/MvjQTA81MhY" frameborder="0" gesture="media"
+                                    allow="encrypted-media" allowfullscreen=""></iframe>
+                            </div>
+                            <div class="btns">
+                                <button data-balloon="Reply" data-balloon-pos="up"><span class="fas fa-comment"></span><span class="number">12</span></button>
+                                <button data-balloon="Retweet" data-balloon-pos="up"><span class="fas fa-retweet"></span><span class="number">45</span></button>
+                                <button data-balloon="Like" data-balloon-pos="up"><span class="far fa-heart"></span><span class="number">73</span></button>
+                                <button data-balloon="Direct Message" data-balloon-pos="up"><span class="far fa-envelope"></span><span class="number"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <a class="avatar" href="#">
+                            <img src="./assets/images/avatar.jpg" /></a>
+                        <div class="infoContainer">
+                            <div class="nameContainer"><a href="#"><span class="name">Will Smith</span><span
+                                        class="atMe">@_Despeauxz</span><span class="time">23m</span></a></div>
+                            <div class="message">
+                                <p>Still one of my favourite movies.</p>
+                                <iframe src="https://www.youtube.com/embed/aoyV49FfjOU" frameborder="0" gesture="media"
+                                    allow="encrypted-media" allowfullscreen=""></iframe>
+                            </div>
+                            <div class="btns">
+                                <button data-balloon="Reply" data-balloon-pos="up"><span class="fas fa-comment"></span><span class="number">12</span></button>
+                                <button data-balloon="Retweet" data-balloon-pos="up"><span class="fas fa-retweet"></span><span class="number">32</span></button>
+                                <button data-balloon="Like" data-balloon-pos="up"><span class="far fa-heart"></span><span class="number">67</span></button>
+                                <button data-balloon="Direct Message" data-balloon-pos="up"><span class="far fa-envelope"></span></button><span class="number"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loadMore centre"><span class="fab fa-twitter"></span>
+                        <button>Load more</button>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="section">
+                        <div class="head">
+                            <h3>Who to follow</h3>
+                            <a href="#">View All</a>
+                        </div>
+                        <div class="body whoToFollow">
+                            <a class="person" href="#">
+                                <div class="avatar">
+                                    <img src="./assets/images/avatar.jpg" />
+                                </div>
+                                <div class="info">
+                                    <div class="nameContainer">
+                                        <div class="name">DevTips</div>
+                                        <div class="atMe">@DevTipsShow</div>
+                                    </div>
+                                    <div class="followBy">Followed by James Bob and Will Smith</div>
+                                </div>
+                                <div class="follow"><span class="fas fa-user-plus"></span></div>
+                            </a>
+                            <a class="person" href="#">
+                                <div class="avatar">
+                                    <img src="./assets/images/avatar.jpg" /></div>
+                                <div class="info">
+                                    <div class="nameContainer">
+                                        <div class="name">Kyle Walker</div>
+                                        <div class="atMe">@KyleWalker13</div>
+                                    </div>
+                                    <div class="followBy">Followed By Will Smith and Bob Ross</div>
+                                </div>
+                                <div class="follow"><span class="fas fa-user-plus"></span></div>
+                            </a>
+                            <a class="person" href="#">
+                                <div class="avatar">
+                                    <img src="./assets/images/avatar.jpg" /></div>
+                                <div class="info">
+                                    <div class="nameContainer">
+                                        <div class="name">Tom Cruise</div>
+                                        <div class="atMe">@_tomcruise</div>
+                                    </div>
+                                    <div class="followBy">Followed by Harry Potter, Dumbledore...</div>
+                                </div>
+                                <div class="follow"><span class="fas fa-user-plus"></span></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="head">
+                            <h3>Trends for you</h3>
+                            <a href="#">Change</a>
+                        </div>
+                        <div class="body Trends">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span>#SydneyDerby</span>
+                                        <p>Adrian Mierzejewski stars as Sydney smash Wanderers</p>
+                                    </a>
+                                </li>
+                                <li><a href="#">#MUNvCHE</a></li>
+                                <li>
+                                    <a href="#">
+                                        <span>Medievil</span>
+                                        <p>12.6K Tweets</p>
+                                    </a>
+                                </li>
+                                <li><a href="#">#ARSvNAP</a></li>
+                                <li>
+                                    <a href="#">
+                                        <span>#2018PredictionsIn5Words</span>
+                                        <p>@BobRoss is Tweeting about this </p>
+                                    </a>
+                                </li>
+                                <li><a href="#">#WBBL03</a></li>
+                                <li><a href="#">#BRIvWEL</a></li>
+                                <li>
+                                    <a href="#">
+                                        <span>#ThingsITrustMoreThanSkSportsNews</span>
+                                        <p>7,677 Tweets</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./assets/js/app.js"></script>
+    </body>
+</html>
