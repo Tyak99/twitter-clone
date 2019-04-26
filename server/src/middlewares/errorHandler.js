@@ -9,7 +9,7 @@
  * Gotten from Express Documentation
  */
 
-const ErrorHandler = (err, req, res, next) => {
+const errorHandler = (err, req, res, next) => {
     if (res.headersSent) {
         return next(err);
     }
@@ -17,4 +17,4 @@ const ErrorHandler = (err, req, res, next) => {
     res.status(err.status || 500).send(err.message);
 };
 
-export default ErrorHandler;
+export default errorHandler;

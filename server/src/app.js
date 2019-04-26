@@ -6,7 +6,7 @@ import { config } from 'dotenv';
 import bodyParser from 'body-parser';
 import 'babel-polyfill';
 import apiRoutes from './routes';
-import ErrorHandler from './middlewares/ErrorHandler';
+import ErrorHandler from './middlewares/errorHandler';
 
 const debugged = debug('app');
 config();
