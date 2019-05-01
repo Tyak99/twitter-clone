@@ -33,5 +33,19 @@ export default {
             password: 'password',
             confirm_password: 'password'
         },
+    },
+    login: {
+        validDetails: {
+            username: 'Despeauxz',
+            password: 'password'
+        },
+        invalidDetails: {
+            username: 'April',
+            password: 'fool'
+        },
+        emptyFields: {
+            username: '',
+            password: ''
+        },
     }
 };
