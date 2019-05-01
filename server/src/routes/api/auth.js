@@ -9,5 +9,6 @@ const authRoutes = express.Router();
 const validation = [ValidationHandler.validate, trim, ValidationHandler.isEmptyReq];
 
 authRoutes.post('/signup', authvalidation.signup, validation, (req, res) => auth.signup(req, res));
+authRoutes.post('/login', authvalidation.login, validation, (req, res) => auth.login(req, res));
 
 export default authRoutes;
