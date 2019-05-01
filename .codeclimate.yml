@@ -9,7 +9,7 @@ ratings:
     - "server/src/**.js"
 
 exclude_paths:
-  - "ui"
+  - "UI"
   - ".nyc_output"
   - "coverage"
   - "node_modules"

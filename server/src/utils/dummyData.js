@@ -8,6 +8,7 @@ export default {
             status: 'active',
             is_admin: true,
             active: true,
+            password: '$2b$10$4ktY4o8zXArp7xwrp15NEurQzBO8D2hT50iLKEqiQprTuezFxeSY6',
             created_at: new Date()
         },
         {
@@ -18,6 +19,7 @@ export default {
             status: 'active',
             is_admin: false,
             active: false,
+            password: '$2b$10$Ty8L.q4NQ/pbNjdVTMlvaOUfOh.fdYwHWId2grtLau5RJCAor3IMK',
             created_at: new Date()
         },
     ],

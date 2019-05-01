@@ -105,8 +105,8 @@ describe('Signup()', () => {
                 .send({ ...emptyDetails })
                 .end((err, res) => {
                     expect(res.statusCode).to.equal(400);
-                    expect(res.body.errors.name.msg).to.equal('Name field cannot be left blank');
-                    expect(res.body.errors.username.msg).to.equal('Username field cannot be left blank');
+                    expect(res.body.errors.name.msg).to.equal('Name field cannot be empty');
+                    expect(res.body.errors.username.msg).to.equal('Username must be between 2 to 144 characters');
                     expect(res.body.errors.email.msg).to.equal('Email field must be specified');
 
                     done(err);
