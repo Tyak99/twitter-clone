@@ -6,7 +6,7 @@ import { config } from 'dotenv';
 import bodyParser from 'body-parser';
 import 'babel-polyfill';
 import apiRoutes from './routes';
-import ErrorHandler from './middlewares/errorHandler';
+import errorHandler from './middlewares/errorHandler';
 
 const debugged = debug('app');
 config();
@@ -27,12 +27,12 @@ app.use(bodyParser.urlencoded({
 app.use('/api', apiRoutes);
 
 // Default catch-all route that sends warning for wrong api routes.
-app.get('/api/*', (req, res) => res.status(409).send({
+app.use('/api/*', (req, res) => res.status(409).send({
     status: 409,
     message: 'Where Are You Going? Page Not Found'
 }));
 
-app.use(ErrorHandler);
+app.use(errorHandler);
 
 app.listen(port, () => {
     debugged(`Listening from port ${port}`);
