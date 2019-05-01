@@ -1,5 +1,5 @@
 /**
- * Handlers uncaught erros in the app
+ * Handlers uncaught errors in the app
  * @function ErrorHandler
  * @param {object} err
  * @param {object} req
