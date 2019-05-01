@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-return-assign */
 // import uuidv4 from 'uuid/v4';
 import moment from 'moment';
 import data from '../utils/dummyData';
@@ -38,6 +40,10 @@ class Users {
         this.users.push(user);
         const response = { ...user, profile };
         return response;
+    }
+
+    findByName(username) {
+        return this.users.find(user => user.username === username);
     }
 }
 
