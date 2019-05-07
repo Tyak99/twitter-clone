@@ -20,4 +20,4 @@ Twitter Clone is an application that enables connection with several people and 
 Project is built with the Project Management Tool, Pivotal Tracker. You can find the template at [https://www.pivotaltracker.com/n/projects/2326772](https://www.pivotaltracker.com/n/projects/2326772)
 
 ### Template
-Template is hosted at https://despeauxz.github.io/twiiter-clone/UI/
+Template is hosted at https://despeauxz.github.io/twitter-clone/UI/
